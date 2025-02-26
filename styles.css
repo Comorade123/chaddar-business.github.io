@@ -1,456 +1,171 @@
-/* General Styles */
-body {
-    font-family: 'Inter', sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    line-height: 1.6;
-    background-color: #DBC4A0; /* Champagne Beige */
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SM CREATIONS - Handmade Chaddars</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .nav-logo {
+            height: 40px;
+            margin-right: 10px;
+        }
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-color: #fff;
+            padding: 50px 20px;
+        }
+        .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5em;
+        }
+        .shop-now-btn {
+            display: inline-block;
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        .products {
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+        .product {
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .image-container img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .contact {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #fff;
+        }
+        .contact form {
+            max-width: 500px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+        }
+        .contact input, .contact textarea {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact button {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">
+            <img src="https://raw.githubusercontent.com/Comorade123/sm_creations.github.io/refs/heads/main/images/images.png" alt="SM CREATIONS Logo" class="nav-logo">
+            <span>SM CREATIONS</span>
+        </div>
+    </nav>
 
-h1, h2, h3 {
-    margin: 0;
-}
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Discover Handmade Luxury</h1>
+            <p>Premium, handcrafted chaddars for every occasion.</p>
+            <a href="#products" class="shop-now-btn">Shop Now</a>
+        </div>
+    </section>
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
+    <!-- Product Showcase -->
+    <section id="products" class="products">
+        <h2>Our Collection</h2>
+        <div class="product-grid">
+            <div class="product">
+                <div class="image-container">
+                    <img src="https://raw.githubusercontent.com/Comorade123/sm_creations.github.io/refs/heads/main/images/IMG-20250226-WA0004.jpg">
+                </div>
+                <h3>Malai Lawn Chaddar</h3>
+            </div>
+            <div class="product">
+                <div class="image-container">
+                    <img src="https://raw.githubusercontent.com/Comorade123/sm_creations.github.io/refs/heads/main/images/IMG-20250226-WA0013.jpg">
+                </div>
+                <h3>Malai Georgette - Pink</h3>
+            </div>
+            <div class="product">
+                <div class="image-container">
+                    <img src="https://raw.githubusercontent.com/Comorade123/sm_creations.github.io/refs/heads/main/images/IMG-20250226-WA0008.jpg">
+                </div>
+                <h3>Malai Georgette - Iced Pink</h3>
+            </div>
+            <div class="product">
+                <div class="image-container">
+                    <img src="https://raw.githubusercontent.com/Comorade123/sm_creations.github.io/refs/heads/main/images/IMG-20250226-WA0017.jpg">
+                </div>
+                <h3>Malai Georgette - Pista Green</h3>
+            </div>
+        </div>
+    </section>
 
-/* Navigation Bar */
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
-    background-color: rgba(255, 255, 255, 0.95);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
+    <!-- Contact Form -->
+    <section class="contact">
+        <h2>Get in Touch</h2>
+        <form>
+            <input type="text" name="name" placeholder="Your Name">
+            <input type="email" name="email" placeholder="Your Email">
+            <textarea name="message" placeholder="Your Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
 
-nav .logo {
-    display: flex;
-    align-items: center;
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.nav-logo {
-    width: 40px;
-    height: auto;
-    margin-right: 10px;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-    padding: 0;
-    margin: 0;
-}
-
-nav ul li a {
-    color: #333;
-    font-weight: bold;
-    font-size: 1rem;
-    padding: 8px 12px;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-}
-
-nav ul li a:hover {
-    background-color: #ff6b6b;
-    color: white;
-}
-
-/* Hero Section */
-.hero {
-    position: relative;
-    max-width: 1200px;
-    margin: 80px auto 20px;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.hero-image img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-}
-
-.hero-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
-    z-index: 2;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 20px 30px;
-    border-radius: 10px;
-}
-
-.hero-content h1 {
-    font-size: 2.8rem;
-    color: #ff6b6b;
-}
-
-.hero-content p {
-    font-size: 1.2rem;
-    font-weight: 300;
-}
-
-/* Product Showcase */
-.products {
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.products h2 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-}
-
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    justify-content: center;
-    align-items: center;
-}
-
-.product {
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    overflow: hidden;
-    width: 100%;
-    max-width: 320px;
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.product:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
-}
-
-.image-container {
-    position: relative;
-    width: 100%;
-    height: 300px;
-    overflow: hidden;
-}
-
-.image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.primary-image {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.secondary-image {
-    opacity: 0;
-    transform: translateY(100%);
-}
-
-.image-container:hover .primary-image {
-    opacity: 0;
-    transform: translateY(-100%);
-}
-
-.image-container:hover .secondary-image {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.product h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.6rem;
-    margin: 15px 0;
-}
-
-.product p {
-    font-size: 1rem;
-    margin: 0 15px 15px;
-    color: #666;
-}
-
-/* Footer */
-footer {
-    background-color: #222;
-    color: white;
-    text-align: center;
-    padding: 30px;
-    font-size: 1rem;
-}
-
-.social-links a {
-    display: inline-block;
-    margin: 0 10px;
-    transition: transform 0.3s ease, opacity 0.3s;
-}
-
-.social-links img {
-    width: 35px;
-    height: 35px;
-    transition: transform 0.3s;
-}
-
-.social-links img:hover {
-    transform: scale(1.3);
-    opacity: 0.8;
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        text-align: center;
-        padding: 10px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .hero-content {
-        width: 90%;
-        padding: 15px;
-    }
-
-    .hero-content h1 {
-        font-size: 2rem;
-    }
-
-    .product-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .product {
-        max-width: 100%;
-    }
-}
-
-.product .cta-btn {
-    display: inline-block;
-    padding: 10px 15px;
-    margin-bottom: 15px;
-    background-color: #ff6b6b;
-    color: white;
-    font-size: 1rem;
-    border-radius: 5px;
-    transition: background 0.3s ease;
-}
-
-.product .cta-btn:hover {
-    background-color: #e05656;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-.hero .shop-now-btn {
-    display: inline-block;
-    padding: 12px 20px;
-    background: #ff6b6b;
-    color: white;
-    font-size: 1.2rem;
-    border-radius: 5px;
-    text-transform: uppercase;
-    transition: background 0.3s ease;
-    margin-top: 15px;
-}
-
-.hero .shop-now-btn:hover {
-    background: #e05656;
-}
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.hero-content,
-.product,
-footer {
-    animation: fadeIn 1s ease-in-out;
-}
-.fab {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #25D366; /* WhatsApp Green */
-    color: white;
-    padding: 12px 15px;
-    border-radius: 50%;
-    font-size: 24px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s;
-}
-
-.fab:hover {
-    transform: scale(1.1);
-}
-
-@media (max-width: 768px) {
-    .product-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-
-    .hero-content h1 {
-        font-size: 2rem;
-    }
-
-    .hero-content p {
-        font-size: 1rem;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-}
-.whatsapp-btn {
-    display: inline-block;
-    background: #25D366;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 5px;
-    font-size: 1rem;
-    text-align: center;
-    transition: background 0.3s;
-}
-
-.whatsapp-btn:hover {
-    background: #1ebe57;
-}
-.image-container img {
-    transition: transform 0.3s ease-in-out;
-}
-
-.image-container:hover img {
-    transform: scale(1.1);
-}
-.reviews {
-    text-align: center;
-    padding: 40px 20px;
-    background: #f9f9f9;
-}
-
-.review {
-    max-width: 600px;
-    margin: auto;
-    font-size: 1.2rem;
-    color: #555;
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-}
-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 500px;
-    margin: auto;
-}
-
-input, textarea {
-    margin: 10px 0;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-.product-grid {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.product {
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    width: 280px;
-    text-align: center;
-    transition: transform 0.3s;
-    padding-bottom: 15px;
-}
-
-.product:hover {
-    transform: translateY(-5px);
-}
-
-.product img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    transition: transform 0.3s ease-in-out;
-}
-
-.product:hover img {
-    transform: scale(1.05);
-}
-
-.product h3 {
-    font-size: 1.4rem;
-    margin: 10px 0;
-}
-
-.product p {
-    font-size: 1rem;
-    margin: 5px 0;
-    color: #666;
-}
-
-.product .whatsapp-btn {
-    display: inline-block;
-    background: #25D366;
-    color: white;
-    padding: 8px 12px;
-    border-radius: 5px;
-    font-size: 0.9rem;
-    transition: background 0.3s;
-}
-
-.product .whatsapp-btn:hover {
-    background: #1ebe57;
-}
-.why-choose-us {
-    text-align: center;
-    padding: 40px;
-    background: #f9f9f9;
-    margin-top: 30px;
-}
-@media (max-width: 768px) {
-    .product-grid {
-        flex-direction: column;
-        align-items: center;
-    }
-    .product {
-        width: 90%;
-    }
-}
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 SM CREATIONS. All rights reserved.</p>
+    </footer>
+</body>
+</html>
