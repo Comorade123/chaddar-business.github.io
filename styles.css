@@ -17,7 +17,7 @@ header {
 
 /* Hero (Banner) */
 .hero {
-    background: url('https://raw.githubusercontent.com/Comorade123/sm_creations.github.io/refs/heads/main/images/Untitled-1.jpg') center/cover no-repeat;
+    background: url 'https://raw.githubusercontent.com/Comorade123/sm_creations.github.io/refs/heads/main/images/Untitled-1.jpg' center/cover no-repeat;
     height: 40vh;
     display: flex;
     justify-content: center;
