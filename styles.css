@@ -246,3 +246,70 @@ footer {
         max-width: 100%;
     }
 }
+
+.product .cta-btn {
+    display: inline-block;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    background-color: #ff6b6b;
+    color: white;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.product .cta-btn:hover {
+    background-color: #e05656;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+.hero .shop-now-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #ff6b6b;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: background 0.3s ease;
+    margin-top: 15px;
+}
+
+.hero .shop-now-btn:hover {
+    background: #e05656;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-content,
+.product,
+footer {
+    animation: fadeIn 1s ease-in-out;
+}
+.fab {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366; /* WhatsApp Green */
+    color: white;
+    padding: 12px 15px;
+    border-radius: 50%;
+    font-size: 24px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.fab:hover {
+    transform: scale(1.1);
+}
+
