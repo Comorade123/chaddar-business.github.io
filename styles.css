@@ -4,21 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SM CREATIONS - Handmade Chaddars</title>
-    <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f8f8f8;
+            background: linear-gradient(to right, #ffecd2, #fcb69f);
+            color: #333;
         }
         nav {
-            background-color: #333;
+            background-color: rgba(51, 51, 51, 0.9);
             color: white;
             padding: 15px;
             display: flex;
             align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
         }
         .logo {
             display: flex;
@@ -33,25 +38,31 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            background-color: #fff;
-            padding: 50px 20px;
+            background: url('https://source.unsplash.com/1600x900/?luxury,fabric') no-repeat center center/cover;
+            height: 80vh;
+            color: white;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
         }
         .hero-content h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 2.5em;
+            font-size: 3em;
         }
         .shop-now-btn {
             display: inline-block;
-            background-color: #333;
+            background-color: #ff6f61;
             color: white;
-            padding: 10px 20px;
+            padding: 12px 24px;
             text-decoration: none;
-            margin-top: 10px;
+            margin-top: 15px;
             border-radius: 5px;
+            transition: background 0.3s;
         }
-        .products {
+        .shop-now-btn:hover {
+            background-color: #e85b50;
+        }
+        .products, .contact {
             text-align: center;
-            padding: 50px 20px;
+            padding: 80px 20px;
         }
         .product-grid {
             display: grid;
@@ -64,16 +75,15 @@
             background-color: white;
             padding: 15px;
             border-radius: 10px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+        .product:hover {
+            transform: translateY(-5px);
         }
         .image-container img {
             width: 100%;
             border-radius: 10px;
-        }
-        .contact {
-            text-align: center;
-            padding: 50px 20px;
-            background-color: #fff;
         }
         .contact form {
             max-width: 500px;
@@ -88,12 +98,16 @@
             border-radius: 5px;
         }
         .contact button {
-            background-color: #333;
+            background-color: #ff6f61;
             color: white;
             padding: 10px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            transition: background 0.3s;
+        }
+        .contact button:hover {
+            background-color: #e85b50;
         }
         footer {
             text-align: center;
@@ -104,15 +118,12 @@
     </style>
 </head>
 <body>
-    <!-- Navigation Bar -->
     <nav>
         <div class="logo">
             <img src="https://raw.githubusercontent.com/Comorade123/sm_creations.github.io/refs/heads/main/images/images.png" alt="SM CREATIONS Logo" class="nav-logo">
             <span>SM CREATIONS</span>
         </div>
     </nav>
-
-    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
             <h1>Discover Handmade Luxury</h1>
@@ -120,39 +131,15 @@
             <a href="#products" class="shop-now-btn">Shop Now</a>
         </div>
     </section>
-
-    <!-- Product Showcase -->
     <section id="products" class="products">
         <h2>Our Collection</h2>
         <div class="product-grid">
-            <div class="product">
-                <div class="image-container">
-                    <img src="https://raw.githubusercontent.com/Comorade123/sm_creations.github.io/refs/heads/main/images/IMG-20250226-WA0004.jpg">
-                </div>
-                <h3>Malai Lawn Chaddar</h3>
-            </div>
-            <div class="product">
-                <div class="image-container">
-                    <img src="https://raw.githubusercontent.com/Comorade123/sm_creations.github.io/refs/heads/main/images/IMG-20250226-WA0013.jpg">
-                </div>
-                <h3>Malai Georgette - Pink</h3>
-            </div>
-            <div class="product">
-                <div class="image-container">
-                    <img src="https://raw.githubusercontent.com/Comorade123/sm_creations.github.io/refs/heads/main/images/IMG-20250226-WA0008.jpg">
-                </div>
-                <h3>Malai Georgette - Iced Pink</h3>
-            </div>
-            <div class="product">
-                <div class="image-container">
-                    <img src="https://raw.githubusercontent.com/Comorade123/sm_creations.github.io/refs/heads/main/images/IMG-20250226-WA0017.jpg">
-                </div>
-                <h3>Malai Georgette - Pista Green</h3>
-            </div>
+            <div class="product"><img src="https://raw.githubusercontent.com/Comorade123/sm_creations.github.io/refs/heads/main/images/IMG-20250226-WA0004.jpg"><h3>Malai Lawn Chaddar</h3></div>
+            <div class="product"><img src="https://raw.githubusercontent.com/Comorade123/sm_creations.github.io/refs/heads/main/images/IMG-20250226-WA0013.jpg"><h3>Malai Georgette - Pink</h3></div>
+            <div class="product"><img src="https://raw.githubusercontent.com/Comorade123/sm_creations.github.io/refs/heads/main/images/IMG-20250226-WA0008.jpg"><h3>Malai Georgette - Iced Pink</h3></div>
+            <div class="product"><img src="https://raw.githubusercontent.com/Comorade123/sm_creations.github.io/refs/heads/main/images/IMG-20250226-WA0017.jpg"><h3>Malai Georgette - Pista Green</h3></div>
         </div>
     </section>
-
-    <!-- Contact Form -->
     <section class="contact">
         <h2>Get in Touch</h2>
         <form>
@@ -162,8 +149,6 @@
             <button type="submit">Send Message</button>
         </form>
     </section>
-
-    <!-- Footer -->
     <footer>
         <p>&copy; 2025 SM CREATIONS. All rights reserved.</p>
     </footer>
