@@ -1,82 +1,293 @@
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chaddar Marketplace</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+            background-color: #f5f5dc; /* Champagne Beige */
+        }
 
-/* Header */
-header {
-    background: #222;
-    color: #fff;
-    padding: 15px;
-    font-size: 1.5em;
-}
+        h1, h2, h3 {
+            margin: 0;
+        }
 
-/* Hero (Banner) */
-.hero {
-    background: url "https://raw.githubusercontent.com/Comorade123/sm_creations.github.io/refs/heads/main/images/Untitled-1.jpg" center/cover no-repeat;
-    height: 40vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-}
-.hero-content {
-    background: rgba(0, 0, 0, 0.6);
-    padding: 20px;
-    border-radius: 10px;
-}
-.hero-content h1 {
-    font-size: 2em;
-}
-.hero-content p {
-    font-size: 1.2em;
-}
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-top: 10px;
-    background: #ff9800;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-}
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
 
-/* Collection Section */
-.collection-container {
-    padding: 40px 10px;
-}
-.products {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-.product-card {
-    width: 200px;
-    background: #f4f4f4;
-    padding: 15px;
-    border-radius: 10px;
-}
-.product-card img {
-    width: 100%;
-    border-radius: 5px;
-}
+        /* Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
-/* Footer */
-footer {
-    background: #222;
-    color: white;
-    padding: 15px;
-    margin-top: 20px;
-    position: relative;
-}
-.whatsapp-link img {
-    width: 40px; /* Resized icon */
-    height: auto;
-    margin-top: 10px;
-}
+        nav .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-logo {
+            width: 40px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: #333;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #007aff;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            max-width: 1200px;
+            margin: 20px auto;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .hero-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            z-index: 1;
+        }
+
+        .hero-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #ff6b6b; /* Pink for contrast */
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        /* Product Showcase */
+        .products {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .products h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+        }
+
+        .product-grid {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .product {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .product:hover {
+            transform: translateY(-10px);
+        }
+
+        .image-container {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .primary-image {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .secondary-image {
+            opacity: 0;
+            transform: translateY(100%);
+        }
+
+        .image-container:hover .primary-image {
+            opacity: 0;
+            transform: translateY(-100%);
+        }
+
+        .image-container:hover .secondary-image {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .product h3 {
+            font-family: 'Playfair Display', serif; /* Playfair Display for product names */
+            font-size: 1.5rem;
+            margin: 20px 0 10px;
+        }
+
+        .product p {
+            font-size: 1rem;
+            margin: 0 20px 20px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        .social-links {
+            margin-top: 10px;
+        }
+
+        .social-links a {
+            margin: 0 10px;
+        }
+
+        .social-links img {
+            width: 30px;
+            height: 30px;
+            transition: transform 0.3s;
+        }
+
+        .social-links img:hover {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">
+            <img src="images/logo.png" alt="Chaddar Marketplace Logo" class="nav-logo">
+            Chaddar Marketplace
+        </div>
+        <ul>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#features">Features</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-image">
+            <img src="images/hero-banner.jpg" alt="Chaddar Marketplace Banner">
+        </div>
+        <div class="hero-content">
+            <h1>Welcome to Chaddar Marketplace</h1>
+            <p>Discover the finest collection of premium chaddars.</p>
+        </div>
+    </section>
+
+    <!-- Product Showcase -->
+    <section id="products" class="products">
+        <h2>Our Collection</h2>
+        <div class="product-grid">
+            <!-- Product 1 -->
+            <div class="product">
+                <div class="image-container">
+                    <img src="images/chaddar1-angle1.jpg" alt="Chaddar 1 - Angle 1" class="primary-image" loading="lazy">
+                    <img src="images/chaddar1-angle2.jpg" alt="Chaddar 1 - Angle 2" class="secondary-image" loading="lazy">
+                </div>
+                <h3>Chaddar 1</h3>
+                <p>Elegant and lightweight, perfect for any occasion.</p>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product">
+                <div class="image-container">
+                    <img src="images/chaddar2-angle1.jpg" alt="Chaddar 2 - Angle 1" class="primary-image" loading="lazy">
+                    <img src="images/chaddar2-angle2.jpg" alt="Chaddar 2 - Angle 2" class="secondary-image" loading="lazy">
+                </div>
+                <h3>Chaddar 2</h3>
+                <p>Heavy-duty and warm, ideal for winter.</p>
+            </div>
+
+            <!-- Add more products here (up to 7) -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 Chaddar Marketplace. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#" target="_blank">
+                <img src="images/facebook-icon.png" alt="Facebook">
+            </a>
+            <a href="#" target="_blank">
+                <img src="images/whatsapp-icon.png" alt="WhatsApp">
+            </a>
+        </div>
+    </footer>
+</body>
+</html>
