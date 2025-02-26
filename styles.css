@@ -157,30 +157,12 @@
             <button type="submit">Send Message</button>
         </form>
     </section>
-/* Footer */
-footer {
-    background-color: #222;
-    color: white;
-    text-align: center;
-    padding: 30px;
-    font-size: 1rem;
-}
-
-.social-links a {
-    display: inline-block;
-    margin: 0 10px;
-    transition: transform 0.3s ease, opacity 0.3s;
-}
-
-.social-links img {
-    width: 35px;
-    height: 35px;
-    transition: transform 0.3s;
-}
-
-.social-links img:hover {
-    transform: scale(1.3);
-    opacity: 0.8;
-}
+    <footer>
+        <p>&copy; 2025 SM CREATIONS. All rights reserved.</p>
+        <div class="social-icons">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+        </div>
+    </footer>
 </body>
 </html>
