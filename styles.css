@@ -66,14 +66,14 @@
         }
         .product-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            max-width: 1000px;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            max-width: 900px;
             margin: auto;
         }
         .product {
             background-color: white;
-            padding: 15px;
+            padding: 10px;
             border-radius: 10px;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s;
@@ -115,12 +115,17 @@
             background-color: #333;
             color: white;
         }
+        .social-icons img {
+            width: 24px;
+            height: 24px;
+            margin: 0 5px;
+        }
     </style>
 </head>
 <body>
     <nav>
         <div class="logo">
-            <img src="https://raw.githubusercontent.com/Comorade123/sm_creations.github.io/refs/heads/main/images/images.png" alt="SM CREATIONS Logo" class="nav-logo">
+            <img src="https://raw.githubusercontent.com/Comorade123/sm_creations.github.io/main/images/images.png" alt="SM CREATIONS Logo" class="nav-logo">
             <span>SM CREATIONS</span>
         </div>
     </nav>
@@ -134,10 +139,10 @@
     <section id="products" class="products">
         <h2>Our Collection</h2>
         <div class="product-grid">
-            <div class="product"><img src="https://raw.githubusercontent.com/Comorade123/sm_creations.github.io/refs/heads/main/images/IMG-20250226-WA0004.jpg"><h3>Malai Lawn Chaddar</h3></div>
-            <div class="product"><img src="https://raw.githubusercontent.com/Comorade123/sm_creations.github.io/refs/heads/main/images/IMG-20250226-WA0013.jpg"><h3>Malai Georgette - Pink</h3></div>
-            <div class="product"><img src="https://raw.githubusercontent.com/Comorade123/sm_creations.github.io/refs/heads/main/images/IMG-20250226-WA0008.jpg"><h3>Malai Georgette - Iced Pink</h3></div>
-            <div class="product"><img src="https://raw.githubusercontent.com/Comorade123/sm_creations.github.io/refs/heads/main/images/IMG-20250226-WA0017.jpg"><h3>Malai Georgette - Pista Green</h3></div>
+            <div class="product"><img src="https://raw.githubusercontent.com/Comorade123/sm_creations.github.io/main/images/IMG-20250226-WA0004.jpg"><h3>Malai Lawn Chaddar</h3></div>
+            <div class="product"><img src="https://raw.githubusercontent.com/Comorade123/sm_creations.github.io/main/images/IMG-20250226-WA0013.jpg"><h3>Malai Georgette - Pink</h3></div>
+            <div class="product"><img src="https://raw.githubusercontent.com/Comorade123/sm_creations.github.io/main/images/IMG-20250226-WA0008.jpg"><h3>Malai Georgette - Iced Pink</h3></div>
+            <div class="product"><img src="https://raw.githubusercontent.com/Comorade123/sm_creations.github.io/main/images/IMG-20250226-WA0017.jpg"><h3>Malai Georgette - Pista Green</h3></div>
         </div>
     </section>
     <section class="contact">
@@ -151,6 +156,10 @@
     </section>
     <footer>
         <p>&copy; 2025 SM CREATIONS. All rights reserved.</p>
+        <div class="social-icons">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+        </div>
     </footer>
 </body>
 </html>
